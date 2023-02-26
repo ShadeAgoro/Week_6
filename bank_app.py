@@ -22,6 +22,7 @@ ravenclaw = HogwartsHouse("Ravenclaw", "Eagle", "Rowena Ravenclaw")
 
 # prints string of instance
 print(gryffindor)
+print(hufflepuff.animal)
 
 # create some object instances
 # instantiation
