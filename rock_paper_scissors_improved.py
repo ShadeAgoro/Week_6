@@ -1,13 +1,7 @@
 
-import random
+import random, Shade_Ex14
 
 # created a welcome and exit game function
-def welcome():
-    user_name= input('Please enter your name: ')
-    print(f'Welcome to the game {user_name}!')
-
-def exit_game():
-    print('Thank you for playing. Goodbye!')
 
 def user_choose_weapon():
     user_decision = ""
@@ -47,6 +41,7 @@ def computer_choose_weapon():
 # assigning numbers to rock, paper or scissors variables for computer to randomly select in the game
 computer_weapon = computer_choose_weapon()
 
+# Set of if statements to compare the user's decision with the computer's decision and give a result
 def decide_winner(users_decision, computer_decision):
     if users_decision == 'Not available':
         print('Please try again!')
@@ -70,7 +65,4 @@ def decide_winner(users_decision, computer_decision):
 
 if __name__ == '__main__':
     decide_winner(user_weapon, computer_weapon)
-
-# Set of if statements to compare the user's decision with the computer's decision and give a result
-decide_winner(user_weapon, computer_weapon)
 

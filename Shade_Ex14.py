@@ -129,6 +129,3 @@ def decide_winner(users_decision, computer_decision):
         else:
             print('Sorry, you lost! - Play again!')
 
-if __name__ == '__main__':
-    # Set of if statements to compare the user's decision with the computer's decision and give a result
-    decide_winner(user_weapon, computer_weapon)
