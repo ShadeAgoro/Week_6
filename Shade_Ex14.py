@@ -69,26 +69,27 @@
 
 import random
 
+def welcome():
+    user_name = input('Please enter your name: ')
+    print(f'Welcome to the game {user_name}!')
+
 def user_choose_weapon():
     user_decision = ""
     # input function for user to select R, P or S
     users_input = input(
-        "Welcome to Rock, Paper, Scissors! Please enter either R for Rock, P for Paper or S for Scissors: ").upper()
+        "Please enter either R for Rock, P for Paper or S for Scissors: ").upper()
     # if conditions to define R,P or S variables and else statement in the event of the user trying to input a value not
     # recognised by the game
     if users_input == 'R':
-        users_decision = 'Rock'
+        user_decision = 'Rock'
     elif users_input == 'P':
-        users_decision = 'Paper'
+        user_decision = 'Paper'
     elif users_input == 'S':
-        users_decision = 'Scissors'
+        user_decision = 'Scissors'
     else:
         print('Sorry, that is not an option. Try again, pick either R, P, or S')
-        users_decision = 'Not available'
+        user_decision = 'Not available'
     return user_decision
-
-# highlight code, right click, select "refactor", then "extract method"
-user_weapon = user_choose_weapon()
 
 
 def computer_choose_weapon():
@@ -102,10 +103,6 @@ def computer_choose_weapon():
         computer_decision = 'Scissors'
     print("Computer decided", computer_decision)
     return computer_decision
-
-
-# assigning numbers to rock, paper or scissors variables for computer to randomly select in the game
-computer_weapon = computer_choose_weapon()
 
 
 def decide_winner(users_decision, computer_decision):
@@ -129,6 +126,12 @@ def decide_winner(users_decision, computer_decision):
         else:
             print('Sorry, you lost! - Play again!')
 
+
 if __name__ == '__main__':
-    # Set of if statements to compare the user's decision with the computer's decision and give a result
-    decide_winner(user_weapon, computer_weapon)
+    welcome()
+    play_again = "Y"
+    while play_again == "Y":
+        user_weapon = user_choose_weapon()
+        computer_weapon = computer_choose_weapon()
+        decide_winner(user_weapon, computer_weapon)
+        play_again = input("Do you want to play again? (Y/N)").upper()
