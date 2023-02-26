@@ -58,11 +58,8 @@ def decide_winner(users_decision, computer_decision):
         else:
             print('Sorry, you lost! - Play again!')
 
-<<<<<<< HEAD
-=======
-
 # included a main trick with welcome function and play again function from while loop
->>>>>>> e37022f0c0f2914751943d5ec6d1d5c755fce8f7
+
 if __name__ == '__main__':
     # calls welcome()function
     welcome()
