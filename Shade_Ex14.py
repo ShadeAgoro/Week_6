@@ -126,15 +126,19 @@ def decide_winner(users_decision, computer_decision):
         else:
             print('Sorry, you lost! - Play again!')
 
-<<<<<<< HEAD
-=======
-
 if __name__ == '__main__':
+    # calls welcome()function
     welcome()
+    # created a variable to ask whether user wishes to play again
     play_again = "Y"
+    # creates a loop that will continue as long as player wishes to play again
     while play_again == "Y":
+        # calls function for user to choose a weapon (rock, paper, or scissors)
         user_weapon = user_choose_weapon()
+        # calls function for computer to randomly choose a weapon (rock, paper, or scissors)
         computer_weapon = computer_choose_weapon()
+        # calls function to decide winner
         decide_winner(user_weapon, computer_weapon)
+        # upper() method to convert to uppercase so case done not matter
+        # game will start over or user can exit the game
         play_again = input("Do you want to play again? (Y/N)").upper()
->>>>>>> 974576753aafd9612c60d00f785a151019aec0c0
