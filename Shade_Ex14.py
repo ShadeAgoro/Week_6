@@ -73,6 +73,6 @@ if __name__ == '__main__':
         computer_weapon = computer_choose_weapon()
         # calls function to decide winner
         decide_winner(user_weapon, computer_weapon)
-        # upper() method to convert to uppercase so case done not matter
+        # upper() method to convert to uppercase so case does not matter
         # game will start over or user can exit the game
         play_again = input("Do you want to play again? (Y/N)").upper()
