@@ -1,77 +1,9 @@
-# EXERCISE 14
-# import random
-# imported random module for computer to select values at random during the game
-
-# play = ['rock', 'paper', 'scissors']
-# created list of values for play variable
-
-# users_input = input("Enter a value of (R, P, or S): ")
-# created a variable to assign user's input to values in play list
-
-# if users_input == 'R':S
-#   users_decision = 'rock'
-# elif users_input == 'P':
-#     users_decision = 'paper'
-# elif users_input == 'S':
-#     users_decision = 'scissors'
-#else:
-#    print('Sorry, this is not an option. Try again, pick either R, P, or S.')
-# used an if conditional statement to create outputs for user's input
-# prints a message if any values other than R, P or S is inputted e.g. Q
-
-# comp_number = play[random.randint(0,2)]
-# randint method for comp game variable to selects random integers assigned to the value of rock, paper, scissors
-
-# if comp_number == 0:
-#   comp_decision = 'rock'
-# if comp_number == 1:
-#   comp_decision = 'paper'
-# else:
-#    comp_decision = 'scissors'
-
-# print(f"Computer chose {comp_decision}.")
-# print the random object that the computer generates
-
-# if users_decision == comp_decision:
-#    print('It is a tie!')
-
-# elif users_decision == 'rock':
-#    if comp_decision == 'scissors':
-#        print('Rock smashes scissors!')
-#    else:
-#        print('Better luck next time!')
-
-# elif users_decision == 'paper':
-#    if comp_decision == 'scissors':
-#        print("You win! Scissors cuts paper")
-#   else:
-#        print("You lose - paper is cut by scissors!")
-
-# elif users_decision == 'paper':
-#if comp_decision == 'rock':
-#print("You win! Paper wraps rock")
-#else:
-#      print("Oh no - you lost!")
-
-# victoria's feedback
-# create functions by selecting code, clicking on "refactor", then "extract method"
-# for user choice and computer choice and user vs computer
-# this automatically brings up 'def' as well as the method that was created from selecting code
-# i.e. user_choose_weapon, computer_choose_weapon and decide winner
-# then type "return" to return code at the end of if statements
-# in first if statement, we created line 67 with empty parentheses, typed "return at the end
-# we also created a variable on the left hand side - "user_weapon = user_choose_weapon"
-# in second if statement, we returned code and created variable "computer_weapon = computer_choose_weapon"
-# we also printed messaged "computer decided, computer_decision" to tidy up the terminal
-# it was feeding back user decision in terminal but not computer decision
-# in third if statement, we put variables 'users_decision' and 'computer_decision' in empty brackets that
-# came with creating the function "decide_winner(user_weapon, computer_weapon)" (line 134)
-
 import random
 
 def welcome():
     user_name = input('Please enter your name: ')
     print(f'Welcome to the game {user_name}!')
+# created a welcome function in addition to pre-existing user, computer and decide winner functions from last week
 
 def user_choose_weapon():
     user_decision = ""
@@ -126,9 +58,8 @@ def decide_winner(users_decision, computer_decision):
         else:
             print('Sorry, you lost! - Play again!')
 
-<<<<<<< HEAD
-=======
 
+# included a main trick with welcome function and play again function from while loop
 if __name__ == '__main__':
     welcome()
     play_again = "Y"
@@ -137,4 +68,3 @@ if __name__ == '__main__':
         computer_weapon = computer_choose_weapon()
         decide_winner(user_weapon, computer_weapon)
         play_again = input("Do you want to play again? (Y/N)").upper()
->>>>>>> 974576753aafd9612c60d00f785a151019aec0c0
