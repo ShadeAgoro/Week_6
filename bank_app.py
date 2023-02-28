@@ -1,30 +1,8 @@
 from account import Account
 # from the module (file) import the Class
 
-# we created a class for Harry Potter Hogwarts Houses to understand classes better, then created multiple instances
-# So here the class is called HogwartsHouse, 3 attributes: name, animal, and founder.
-# __init__ a special method is called when a new instance of the class is created.
 
-class HogwartsHouse:
-    def __init__(self, name, animal, founder):
-        self.name = name
-        self.animal = animal
-        self.founder = founder
 
-# __str__ a special method that shows a string representation of the instance.
-    def __str__(self):
-        return f"{self.name}, Animal: {self.animal}, Founder: {self.founder}"
-
-gryffindor = HogwartsHouse("Gryffindor", "Lion", "Godric Gryffindor")
-slytherin = HogwartsHouse("Slytherin", "Serpent", "Salazar Slytherin")
-hufflepuff = HogwartsHouse("Hufflepuff", "Badger", "Helga Hufflepuff")
-ravenclaw = HogwartsHouse("Ravenclaw", "Eagle", "Rowena Ravenclaw")
-
-# prints string of instance
-print(gryffindor)
-print(hufflepuff.animal)
-print(slytherin.animal)
-print(hufflepuff.founder)
 
 # create some object instances
 # instantiation
